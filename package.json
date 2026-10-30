@@ -1,0 +1,17 @@
+{
+  "name": "@phi369/decision-field",
+  "version": "0.1.0-alpha.1",
+  "description": "Offline-first, reproducible decision-state simulation kernel",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "demo": "npm run build && node examples/city.mjs"
+  },
+  "devDependencies": { "typescript": "^5.8.3" }
+}
